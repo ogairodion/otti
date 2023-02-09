@@ -1,0 +1,15 @@
+section.bottom#bottom
+    .l-default
+        .bottom__wrapper 
+            .bottom__info
+                .bottom__logo  
+                    picture 
+                        source(data-srcset="img/bottom/footer-logo.webp" type="image/webp")
+                        source(data-srcset="img/bottom/footer-logo.png" type="image/png")
+                        img.lazy(data-src="img/bottom/footer-logo.png" alt="")
+                .bottom__name ООО "ДАКО ДНЕПР"
+                a.bottom__address(href="https://goo.gl/maps/7o6gUs86SA1VPwQe7" target="_blank") Днепропетровская обл., г. Днепр, ул. Маршала Малиновского, д. 124
+                a.bottom__phone(href="tel:0950943556") 0950943556
+                a.bottom__mail(href="mailto:dakodnipro@gmail.com") dakodnipro@gmail.com 
+            .bottom__form 
+                include ../form/form.pug

@@ -1,0 +1,98 @@
+.coloss {
+    position: relative;
+    width: 100%;
+    min-height: 908px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    @media screen and (max-width: 600px) {
+        overflow: visible;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 88%;
+        min-height: 448px;
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,223,168,1) 100%);
+        @media screen and (max-width: 600px) {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        min-height: 700px;
+    }
+
+    @media screen and (max-width: 600px) {
+        min-height: 0;
+        background: none !important;
+    }
+
+    &__info {
+        padding: 48px 0 84px;
+
+        @media screen and (max-width: 600px) {
+            width: 100%;
+            padding: 22px 0 130px;
+        }
+    }
+
+    &__title {
+        max-width: 568px;
+        margin-bottom: 52px;
+
+        @media screen and (max-width: 991px) {
+            max-width: 450px;
+            margin-bottom: 20px;
+        }
+
+        @media screen and (max-width: 600px) {
+            max-width: 232px;
+        }
+    }
+
+    &__text {
+        max-width: 60%;
+        font-size: 26px;
+        line-height: 120%;
+        color: $gold;
+
+        @media screen and (max-width: 991px) {
+            font-size: 20px;
+        }
+
+        @media screen and (max-width: 600px) {
+            font-size: 16px;
+        }
+
+        &.element-animation {
+            opacity: 0;
+        }
+
+        &.element-animation.element-show {
+            opacity: 1;
+            transition: opacity 1s;
+            animation: textLeft 1s ease;
+        }
+    }
+
+    &__back {
+        position: absolute;
+        bottom: -20%;
+        right: 3%;
+        z-index: 2;
+
+        @media screen and (max-width: 991px) {
+            width: 250px;
+        }
+
+        @media screen and (max-width: 600px) {
+            top: 20px;
+            right: -5%;
+            width: 150px;
+        }
+    }
+}

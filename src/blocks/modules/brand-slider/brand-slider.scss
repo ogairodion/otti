@@ -1,0 +1,171 @@
+.brand-slider {
+    padding: 78px 0 100px;
+
+    @media screen and (max-width: 767px) {
+        padding: 40px 0;
+    }
+
+    &__title {
+        max-width: 683px;
+        padding-bottom: 94px;
+
+        @media screen and (max-width: 991px) {
+            padding-bottom: 20px;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        &-brands {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 100%;
+
+            @media screen and (max-width: 991px) {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+
+    &__brands {
+        position: relative;
+        width: 88%;
+        padding-right: 83px;
+
+        @media screen and (max-width: 991px) {
+            order: 8;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding-right: 0;
+        }
+    }
+
+    &__logos {
+        width: 12%;
+        height: 560px;
+        overflow-x: visible;
+
+        @media screen and (max-width: 991px) {
+            width: 100%;
+            max-width: 600px;
+            height: 150px;
+            margin: 0 auto 20px;
+            overflow-x: hidden;
+        }
+
+        .swiper-slide {
+            position: relative;
+            display: flex;
+            align-items: center;
+            transform: scale(.8);
+            transition: all .4s ease;
+            &-active {
+                display: none;
+                opacity: 0;
+
+                @media screen and (max-width: 991px) {
+                    display: block;
+                    opacity: 1;
+                }
+            }
+            
+            img {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                display: block;
+                height: 100%;
+                width: auto;
+                object-fit: contain;
+            }
+        }
+
+        &-main {
+            max-width: 547px;
+            max-height: 168px;
+            margin-right: 0;
+            margin-left: auto;
+            
+            @media screen and (max-width: 991px) {
+                display: none;
+            }
+
+            .swiper-slide {
+                position: relative;
+                display: flex;  
+                justify-content: flex-end;
+                width: 547px !important;
+                min-height: 150px;
+
+                @media screen and (max-width: 991px) {
+                    width: auto;
+                }
+                img {
+                    position: absolute;
+                    text-align: 0;
+                    display: block;
+                    width: 100%;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+
+    &__top {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    &__img {
+        width: auto;
+        // max-width: 300px;
+        transition: all .4s ease;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        // &:hover {
+        //     transform: scale(1.1) !important;
+        // }
+        @media screen and (max-width: 991px) {
+            position: relative;
+            width: auto;
+            margin-bottom: 20px;
+        }
+
+        @media screen and (max-width: 600px) {
+            max-width: 100px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .swiper-pagination {
+        width: 100%;
+        order: 9;
+        position: relative;
+        margin: 62px auto 0;
+
+        @media screen and (max-width: 991px) {
+            margin: 40px auto 0;
+        }
+    }
+
+    .swiper-pagination-bullet {
+        background: #F5B272;
+        margin-right: 16px;
+    }
+}

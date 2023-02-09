@@ -1,0 +1,83 @@
+-
+    const menu = [
+        {
+            text: "О продукте",
+            href: "#products-slider"
+        },
+        {
+            text: "КАЧЕСТВо",
+            href: "#quality"
+        },
+        {
+            text: "этапы производства",
+            href: "#stages"
+        },
+        {
+            text: "о бренде",
+            href: "#brand"
+        },
+        {
+            text: "О КОМПАНИИ",
+            href: "#about"
+        },
+        {
+            text: "сотрудничество",
+            href: "#conditions"
+        }
+    ];
+
+    const products = ["1", "2", "3", "4", "5"];
+
+header.header
+    .l-default 
+        .header__wrapper 
+            .header__logo 
+                +svgMono("logo")
+            a.header__phone(href="+380945678901") +380945678901 
+            .lang
+                .lang__active(data-lang)
+                .lang__list
+                    .lang__list-item(data-lang="ua") Укр
+                    .lang__list-item(data-lang="ru") Рус
+                    .lang__list-item(data-lang="en") Eng
+            .header__burger 
+                +svgMono("burger")
+    .header__menu   
+        .header__menu-container
+            .header__menu-top
+                .l-menu
+                    .header__burger 
+                        +svgMono("burger")
+            .header__menu-items
+                .l-menu
+                    each menu_item in menu
+                        a.header__menu-item.scroll(href=menu_item.href)= menu_item.text 
+            .header__menu-content
+                .header__menu-wrapper
+                    .header__menu-products
+                        each product in products
+                            .header__menu-product
+                                picture
+                                    source(data-srcset="img/products/" + product + ".webp" type="image/webp")
+                                    source(data-srcset="img/products/" + product + ".png" type="image/png")
+                                    img.lazy(data-src="img/products/" + product + ".png" alt="")
+                    .header__menu-contact
+                        .header__menu-title Свяжитесь с нами
+                        .header__menu-links
+                            a.header__menu-link(href="") 
+                                +svgMono("instagram")
+                            a.header__menu-link(href="") 
+                                +svgMono("facebook")
+                .header__menu-img--back 
+                    picture
+                        source(srcset="img/back/menuback.webp" type="image/webp")
+                        source(srcset="img/back/menuback.png" type="image/png")
+                        img(src="img/back/menuback.png" alt="")
+        .header__mobile-lang
+            .lang.lang--mobile 
+                .lang__list
+                    .lang__list-item(data-lang="ua") Укр
+                    .lang__list-item(data-lang="ru") Рус
+                    .lang__list-item(data-lang="en") Eng
+        .header__menu-contact-mobile
+                            

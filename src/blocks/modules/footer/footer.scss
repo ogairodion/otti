@@ -1,0 +1,43 @@
+.footer {
+    padding-bottom: 82px;
+
+    @media screen and (max-width: 600px) {
+        padding-bottom: 33px;
+    }
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media screen and (max-width: 600px) {
+            flex-direction: column;
+        }
+    }
+
+    &__policy {
+        font-family: $caption_font;
+
+        @media screen and (max-width: 600px) {
+            margin-bottom: 12px;
+
+            &:first-child {
+                order: 2;
+                font-size: 12px;
+            }
+
+            &:last-child {
+                order: 1;
+            }
+
+            &:nth-child(2) {
+                order: 9;
+            }
+        }
+    }
+
+    &__logo {
+        @media screen and (max-width: 600px) {
+            margin-bottom: 12px;
+        }
+    }
+}

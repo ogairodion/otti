@@ -1,0 +1,167 @@
+.products-slider {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 160px;
+    @media screen and (max-width: 600px) {
+        padding-bottom: 60px;
+    }
+    .swiper-wrapper {
+        overflow-y: visible;
+    }    
+    .swiper-container {
+        padding: 20px 0;
+        @media screen and (max-width: 600px) {
+            overflow: visible;
+        }
+    }
+    &__top {
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            min-height: 282px;
+            background: url('.././img/products/back.jpg');
+            background-size: cover;
+
+            @media screen and (max-width: 1199px) {
+                min-height: 150px;
+            }
+        }
+    }
+
+    .swiper-slide {
+        pointer-events: none;
+        picture {
+            display: block;
+            transform: scale(.75);
+            transition: all .3s ease;
+        }
+        &-next, &-prev {
+            picture {
+                transform: scale(.90);
+            }
+        }
+        &-duplicate, &-duplicate {
+            &-next, &-prev {
+                picture {
+                    transform: scale(.90);
+                }
+            }   
+        }
+
+        &-duplicate, &-duplicate {
+            &-active {
+                pointer-events: inherit;
+                .products-slider__slide-info {
+                    display: block;
+                }
+                picture {
+                    transform: scale(1.1);
+                }
+            }   
+        }
+
+        &-active {
+            pointer-events: inherit;
+            .products-slider__slide-info {
+                display: block;
+            }
+            picture {
+                transform: scale(1.1);
+            }
+        } 
+    }
+    &__bottom {
+        position: relative;
+        max-width: 1273px;
+        margin: 0 auto;
+
+    }
+    &__texts {
+        max-width: 438px;
+        margin-top: 60px;
+
+        @media screen and (max-width: 1199px) {
+            margin-top: 20px;
+        }
+        @media screen and (max-width: 600px) {
+            margin-top: 28px;
+        }
+        &-info {
+            text-align: center;
+            margin: 0 auto;
+        }
+        &-title {
+            font-family: $caption_font;
+            font-size: 52px;
+            line-height: 120%;
+            font-weight: 600;
+            color: $gold;
+            margin-bottom: 11px;
+
+            @media screen and (max-width: 1199px) {
+                font-size: 36px;
+            }
+
+            @media screen and (max-width: 600px) {
+                font-size: 20px;
+            }
+        }
+        &-text {
+            font-size: 36px;
+            line-height: 120%;
+            font-weight: 600;
+
+            @media screen and (max-width: 1199px) {
+                font-size: 26px;
+            }
+
+            @media screen and (max-width: 600px) {
+                max-width: 183px;
+                font-size: 16px;
+                margin: 0 auto;
+            }
+        }
+    }
+    
+    .slider {
+        &-arrow {
+            position: absolute;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            width: 160px;
+            height: 160px;
+            border: 1px solid $gold;
+            border-radius: 100%;
+            padding: 45px;
+            cursor: pointer;
+
+            @media screen and (max-width: 1199px) {
+                width: 80px;
+                height: 80px;
+                padding: 30px;
+            }
+
+            @media screen and (max-width: 600px) {
+                width: 60px;
+                height: 60px;
+                padding: 20px;
+            }
+            &-prev {
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+            }
+            &-next {
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%) rotate(180deg);
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+form.form(action="") 
+    .form__title Свяжитесь с нами
+    .form__inputs
+        .form__input
+            input(type="text" placeholder="Имя*" name="name" required)
+            input.phone(type="text" name="phone" placeholder="Телефон*" required)
+            input(type="email" name="email" placeholder="E-mail")
+    .form__checkboxes
+        .form__checkboxes-title Цель консультации
+        .form__checkbox
+            input.form__checkbox-input(type="radio" value="Аренда земли" name="question" checked)
+            .form__checkbox-btn
+            .form__checkbox-text Аренда земли
+        .form__checkbox
+            input.form__checkbox-input(type="radio" value="Аренда земли" name="question")
+            .form__checkbox-btn
+            .form__checkbox-text Покупка продукции
+        .form__checkbox
+            input.form__checkbox-input(type="radio" value="Аренда земли" name="question")
+            .form__checkbox-btn
+            .form__checkbox-text Сотрудничество
+    .form__privacy
+        .form__checkbox
+            //- input.agreement.form__checkbox-input(type="checkbox" checked)
+            //- .form__checkbox-btn
+            .form__checkbox-text Нажимая кнопку «Отправить», я даю согласие на обработку моих персональных данных
+    input.form__submit.btn.btn--black(type="submit" value="Надіслати")   
+        
+        

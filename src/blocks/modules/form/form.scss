@@ -1,0 +1,112 @@
+.form {
+    &__title {
+        font-family: $caption_font;
+        font-size: 24px;
+        line-height: 120%;
+        font-weight: 600;
+        margin-bottom: 59px;
+    }
+    &__input {
+        input {
+            width: 100%;
+            font-size: 16px;
+            line-height: 1;
+            padding-bottom: 7px;
+            border-bottom: 1px solid #303030;
+            margin-bottom: 35px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__inputs {
+        margin-bottom: 35px;
+    }
+
+    &__checkboxes {
+        margin-bottom: 49px;
+        &-title {
+            font-family: $caption_font;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 120%;
+            margin-bottom: 17px;
+        }
+
+        .form {
+            &__checkbox {
+                margin-bottom: 18px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }        
+        }
+    }
+
+    &__checkbox {
+        position: relative;
+        display: flex;
+        align-items: center;
+        max-width: fit-content;
+
+        &-btn {
+            position: relative;
+            min-width: 25px;
+            min-height: 25px;
+            border: 1px solid #000;
+            margin-right: 13px;
+            cursor: pointer;
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                background: #000;
+                opacity: 0;
+            }
+
+            &:hover {
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &-input {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            opacity: 0;
+            cursor: pointer;
+
+            &:checked + .form__checkbox-btn {
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &-text {
+            font-family: $caption_font;
+            font-size: 16px;
+            line-height: 120%;
+            font-weight: 600;
+        }
+    }
+
+    &__submit {
+        max-width: fit-content;
+        font-size: 20px;
+        line-height: 1;
+        padding: 11px 55px;
+        margin-top: 41px;
+    }
+}

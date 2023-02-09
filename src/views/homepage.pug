@@ -1,0 +1,27 @@
+extends layouts/default
+include helpers/_mixins
+
+block variables
+  - const title = "Главная страница проекта"
+
+block content
+  include ../blocks/modules/loader/loader.pug
+  include ../blocks/modules/header/header.pug
+  main.main 
+    include ../blocks/modules/main-top/main-top.pug
+    include ../blocks/modules/qualities/qualities.pug
+    include ../blocks/modules/coloss/coloss.pug
+    include ../blocks/modules/stages/stages.pug
+    include ../blocks/modules/certificate/certificate.pug
+    include ../blocks/modules/brand/brand.pug
+    include ../blocks/modules/products-slider/products-slider.pug
+    include ../blocks/modules/about/about.pug
+    include ../blocks/modules/brand-slider/brand-slider.pug
+    include ../blocks/modules/conditions/conditions.pug
+    include ../blocks/modules/bottom/bottom.pug
+  include ../blocks/modules/footer/footer.pug
+  include ../blocks/modules/popup/popup.pug
+
+block scripts
+  script(defer src="js/vendor.js")
+  script(defer src="js/main.js")

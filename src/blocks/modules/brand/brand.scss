@@ -1,0 +1,126 @@
+.brand {
+    padding: 170px 0 134px;
+
+    @media screen and (max-width: 1299px) {
+        padding: 80px 0;
+    }
+
+    @media screen and (max-width: 600px) {
+        padding: 60px 0;
+        margin-bottom: 40px;
+    }
+
+    .l-default {
+        overflow-x: visible;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+        }
+    }
+
+    &__info, &__img {
+        width: 50%;
+        @media screen and (max-width: 767px) {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        max-width: 435px;
+        font-size: 26px;
+        line-height: 120%;
+        color: #303030;
+        margin-bottom: 72px;
+
+        @media screen and (max-width: 767px) {
+            max-width: 240px;
+            font-size: 16px;
+            margin-bottom: -50px;
+        }
+
+        &.element-animation {
+            opacity: 0;
+        }
+
+        &.element-animation.element-show {
+            opacity: 1;
+            transition: opacity 1s;
+            animation: textLeft 1s ease;
+        }
+    }
+    &__info {
+        z-index: 2;
+        &-img {
+            max-width: 662px;
+            margin-left: auto;
+
+            &.element-animation {
+                opacity: 0;
+            }
+    
+            &.element-animation.element-show {
+                opacity: 1;
+                transition: opacity 1s;
+                animation: textLeft 1s ease;
+            }
+    
+
+            @media screen and (max-width: 991px) {
+                display: none;
+            }
+        }
+    }
+
+    &__img {
+        display: flex;
+        justify-content: flex-end;
+        margin-left: 35px;
+        @media screen and (max-width: 767px) {
+            transform: translateX(60px);
+            margin-left: 0;
+
+            &.lazy {
+                opacity: 1;
+            }
+        }
+
+        img {
+            display: block;
+            max-width: 700px;
+            @media screen and (max-width: 991px) {
+                max-width: 500px;
+            }
+
+            @media screen and (max-width: 767px) {
+                max-width: 350px;
+            }
+        }
+
+        &.element-animation {
+            opacity: 0;
+
+            @media screen and (max-width: 767px) {
+                transform: translateX(0);
+            }
+        }
+
+        &.element-animation.element-show {
+            opacity: 1;
+            transition: opacity 1s;
+            animation: textRight 1s ease;
+
+            @media screen and (max-width: 767px) {
+                animation: none;
+            }
+        }   
+    }
+}

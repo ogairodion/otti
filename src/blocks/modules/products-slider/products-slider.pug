@@ -1,0 +1,79 @@
+-
+    const products_slider = [
+        {
+            img: "3",
+            title: "Овсяные Экстра",
+            text: "для любителей классической овсянки1"
+        },
+        {
+            img: "3",
+            title: "Овсяные Экстра",
+            text: "для любителей классической овсянки2"
+        },
+        {
+            img: "3",
+            title: "Овсяные Экстра",
+            text: "для любителей классической овсянки3"
+        },
+        {
+            img: "3",
+            title: "Овсяные Экстра",
+            text: "для любителей классической овсянки4"
+        },
+        {
+            img: "3",
+            title: "Овсяные Экстра",
+            text: "для любителей классической овсянки5"
+        },
+        {
+            img: "3",
+            title: "Овсяные Экстра",
+            text: "для любителей классической овсянки6"
+        },
+        {
+            img: "3",
+            title: "Овсяные Экстра",
+            text: "для любителей классической овсянки7"
+        },
+        {
+            img: "3",
+            title: "Овсяные Экстра",
+            text: "для любителей классической овсянки8"
+        },
+        {
+            img: "3",
+            title: "Овсяные Экстра",
+            text: "для любителей классической овсянки9"
+        },
+        {
+            img: "3",
+            title: "Овсяные Экстра",
+            text: "для любителей классической овсянки10"
+        }
+    ]
+
+section.products-slider#products-slider
+    .products-slider__top
+        .l-default
+            .products-slider__slider.swiper-container
+                .swiper-wrapper
+                    each products_slide in products_slider
+                        .products-slider__slide.swiper-slide
+                            a.products-slider__slide-img(href="#popup-product" data-fancybox)
+                                picture
+                                    source(srcset="img/products/" + products_slide.img + ".webp" type="image/webp")
+                                    source(srcset="img/products/" + products_slide.img + ".png" type="image/png")
+                                    img(src="img/products/" + products_slide.img + ".png" alt="")
+    .l-default
+        .products-slider__bottom
+            .products-slider__texts.swiper-container
+                .swiper-wrapper
+                    each products_slide in products_slider
+                        .products-slider__texts-slide.swiper-slide
+                            .products-slider__texts-info
+                                .products-slider__texts-title= products_slide.title
+                                .products-slider__texts-text= products_slide.text
+            .slider-arrow.slider-arrow-prev
+                img.lazy(src="img/svg/arrow.svg", alt="")
+            .slider-arrow.slider-arrow-next
+                img.lazy(src="img/svg/arrow.svg", alt="")

@@ -1,0 +1,41 @@
+.certificate {
+    background: #F5B272;
+
+    &__logo {
+        font-size: 152px;
+        margin-right: 55px;
+
+        @media screen and (max-width: 600px) {
+            font-size: 102px;
+            margin-right: 36px;
+        }
+    }
+
+    &__text {
+        font-size: 29px;
+        line-height: 120%;
+        font-weight: 600;
+        color: #fff;
+
+        @media screen and (max-width: 600px) {
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        &.element-animation {
+            opacity: 0;
+        }
+
+        &.element-animation.element-show {
+            opacity: 1;
+            transition: opacity 1s;
+            animation: textLeft 1s ease;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        padding: 26px 0;
+    }
+}

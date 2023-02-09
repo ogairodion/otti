@@ -1,0 +1,119 @@
+.qualities {
+    padding-bottom: 240px;
+    margin-top: 75px;
+
+    @media screen and (max-width: 600px) {
+        min-height: 586px;
+        margin-top: 0;
+        margin-bottom: 80px;
+        padding-bottom: 0;
+    }
+
+    .l-default {
+        z-index: 1;
+    }
+    
+    &__title {
+        color: $gold;
+    }
+    &__info {
+        width: 40%;
+        @media screen and (max-width: 991px) {
+            width: 50%;
+        }
+
+        @media screen and (max-width: 600px) {
+            width: 100%;
+        }
+    }
+    &__list {
+        width: 100%;
+        max-width: 465px;
+        margin-top: 81px;
+        text-align: right;
+        @media screen and (max-width: 991px) {
+            margin-top: 40px;
+        }
+        @media screen and (max-width: 600px) {
+            text-align: left;
+            margin-top: 28px;
+        }
+        &-title {
+            font-size: 36px;
+            font-weight: 600;
+            line-height: 120%;
+            color: $gold;
+            margin-bottom: 30px;
+
+            @media screen and (max-width: 1399px) {
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+
+            @media screen and (max-width: 600px) {
+                font-size: 23px;
+                margin-bottom: 50px;
+            }
+        }
+
+        &-item {
+            position: relative;
+            width: auto;
+            font-size: 20px;
+            line-height: 120%;
+            padding-top: 20px;
+            margin-bottom: 32px;
+            transition: all .4s ease;
+            cursor: pointer;
+            pointer-events: none;
+            @media screen and (max-width: 1399px) {
+                margin-bottom: 20px;
+            }
+
+            @media screen and (max-width: 600px) {
+                max-width: 161px;
+                font-size: 16px;
+                padding-top: 12px;
+                margin-bottom: 12px;
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 150px;
+                height: 2px;
+                background: $gold;
+                @media screen and (max-width: 600px) {
+                    left: 0;
+                    width: 115px;
+                    height: 1px;
+                }
+            }
+            &.element-animation {
+                opacity: 0;
+            }
+    
+            &.element-animation.element-show {
+                opacity: 1;
+                transition: opacity 1s;
+                animation: textLeft 1s ease;
+    
+                &:before {
+                    opacity: 1;
+                    animation: line 3s ease;
+                }
+            }
+            &.unlock {
+                pointer-events: inherit;
+            }
+            &:hover {
+                text-shadow: 0 0 .65px #241f20, 0 0 1px #241f20;
+            }
+            &.active {
+                text-shadow: 0 0 .65px #241f20, 0 0 1px #241f20;
+            }
+        }
+    }
+    
+}

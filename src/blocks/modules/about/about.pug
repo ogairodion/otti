@@ -1,0 +1,63 @@
+-
+    const about = [
+        {
+            left: "в 2002 году",
+            right: "Начали производить хлопья",
+        },
+        {
+            left: "с 2005 года",
+            right: "Сотрудничаем с ритейл-сетями Украины",
+        },
+        {
+            left: "в 2021 году",
+            right: "Запустили свой собственный бренд хлопьев",
+        }
+    ];
+
+    const about_bottom = [
+        {
+            title: {
+                number: "9",
+                text: "КЛЮЧЕВЫХ РИТЕЙЛЕРОВ",
+            },
+            text: "являются нашими постоянными клиентами"
+        },
+        {
+            title: {
+                number: "13 000",
+                text: "",
+            },
+            text: "тонн за год сырья перерабатываем"
+        },
+        {
+            title: {
+                number: "5 000",
+                text: "",
+            },
+            text: "тонн хлопьев фасуем ежегодно"
+        },
+        {
+            title: {
+                number: "10 млн",
+                text: "",
+            },
+            text: "пачек поставляем за год"
+        }
+    ]
+
+section.about#about(style="background: url('.././img/about/bg.jpg'); background-size: cover;")
+    .l-default 
+        h2.about__title.title.title--h2.element-animation О компании
+        .about__list
+            each about_item in about 
+                .about__list-item.element-animation 
+                    .about__list-left= about_item.left 
+                    .about__list-right= about_item.right
+        .about__bottom
+            each about_bottom_item in about_bottom
+                .about__bottom-item
+                    .about__bottom-title.element-animation
+                        .about__bottom-title--number= about_bottom_item.title.number
+                        - if (about_bottom_item.title.text)
+                            .about__bottom-title--text= about_bottom_item.title.text
+                    .about__bottom-text.element-animation= about_bottom_item.text

@@ -1,0 +1,125 @@
+-
+    const brand_imgs=[
+        {
+            img: "1",
+            id: "1"
+        },
+        {
+            img: "1",
+            id: "1"
+        },
+        {
+            img: "1",
+            id: "1"
+        },
+        {
+            img: "1",
+            id: "1"
+        },
+        {
+            img: "1",
+            id: "1"
+        },
+        {
+            img: "1",
+            id: "1"
+        },
+        {
+            img: "2",
+            id: "1"
+        },
+        {
+            img: "3",
+            id: "1"
+        },
+        {
+            img: "4",
+            id: "2"
+        },
+        {
+            img: "5",
+            id: "3"
+        },
+        {
+            img: "6",
+            id: "4"
+        },
+        {
+            img: "7",
+            id: "5"
+        },
+        {
+            img: "8",
+            id: "6"
+        },
+        {
+            img: "9",
+            id: "7"
+        },
+        {
+            img: "10",
+            id: "7"
+        }
+    ];
+
+    const brand_logos=[
+        {
+            img: "1",
+            id: "1"
+        },
+        {
+            img: "2",
+            id: "2"
+        },
+        {
+            img: "3",
+            id: "3"
+        },
+        {
+            img: "4",
+            id: "4"
+        },
+        {
+            img: "5",
+            id: "5"
+        },
+        {
+            img: "6",
+            id: "6"
+        },
+        {
+            img: "7",
+            id: "7"
+        },
+    ];
+
+section.brand-slider
+    .l-default 
+        .brand-slider__wrapper
+            .brand-slider__top 
+                h2.brand-slider__title.title.title--h2.element-animation Наши хлопья которые вы уже знаете:
+                .brand-slider__logos-main.swiper-container 
+                    .swiper-wrapper
+                        each brand_logo in brand_logos
+                            .swiper-slide(data-id=brand_logo.id)
+                                picture
+                                    source(srcset="img/brand-slider/logos/" + brand_logo.img + ".webp" type="image/webp")
+                                    source(srcset="img/brand-slider/logos/" + brand_logo.img + ".png" type="image/png")
+                                    img(src="img/brand/brand-slider/logos/" + brand_logo.img + ".png" alt="")
+            .brand-slider__brands
+                .brand-slider__wrapper-brands 
+                    each brand_img in brand_imgs
+                        .brand-slider__img.hidden(data-id=brand_img.id)
+                            picture
+                                source(srcset="img/brand-slider/" + brand_img.img + ".webp" type="image/webp")
+                                source(srcset="img/brand-slider/" + brand_img.img + ".png" type="image/png")
+                                img(src="img/brand/brand-slider/" + brand_img.img + ".png" alt="")
+            .brand-slider__logos.swiper-container
+                .swiper-wrapper 
+                    each brand_logo in brand_logos
+                        .swiper-slide(data-id=brand_logo.id)
+                            picture
+                                source(srcset="img/brand-slider/logos/" + brand_logo.img + ".webp" type="image/webp")
+                                source(srcset="img/brand-slider/logos/" + brand_logo.img + ".png" type="image/png")
+                                img(src="img/brand/brand-slider/logos/" + brand_logo.img + ".png" alt="")  
+            .swiper-pagination

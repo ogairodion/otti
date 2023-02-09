@@ -1,0 +1,28 @@
+-
+    const main_top_icons = ["1", "2", "3", "4", "5"]
+
+section.main-top
+    .l-default 
+        .main-top__info
+            h1.main-top__title.title.title--h1.element-animation ОВСЯНЫЕ ХЛОПЬЯ ПРОВЕРЕННЫЕ ПОТРЕБИТЕЛЕМ
+            .main-top__logo 
+                +svgMono("main-logo")
+        .main-top__img
+            .main-top__img-wrapper
+                picture
+                    source(data-srcset="img/main-top/bread.webp" type="image/webp")
+                    source(data-srcset="img/main-top/bread.png" type="image/png")
+                    img.main-top__img-bread.lazy(data-src="img/main-top/bread.png" alt="")
+                picture
+                    source(data-srcset="img/main-top/shadow.webp" type="image/webp")
+                    source(data-srcset="img/main-top/shadow.png" type="image/png")
+                    img.main-top__img-shadow.lazy(data-src="img/main-top/shadow.png" alt="")
+                .main-top__icons 
+                    each main_top_icon in main_top_icons 
+                        .main-top__icon(data-id=main_top_icon)
+                            img(src="img/svg/main-top/" + main_top_icon + ".svg", alt="")
+    .main-top__back
+        picture
+            source(data-srcset="img/main-top/back.webp" type="image/webp")
+            source(data-srcset="img/main-top/back.png" type="image/png")
+            img.lazy(data-src="img/main-top/back.png" alt="")

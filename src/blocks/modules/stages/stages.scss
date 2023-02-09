@@ -1,0 +1,112 @@
+.stages {
+    padding: 156px 0 23px;
+    @media screen and (max-width: 1399px) {
+        padding: 60px 0;
+    }
+
+    &__title {
+        margin-bottom: 56px;
+
+        @media screen and (max-width: 767px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -127px;
+        @media screen and (max-width: 1399px) {
+            margin: 0 -70px;
+        }
+
+        @media screen and (max-width: 1199px) {
+            margin: 0 -20px;
+        }
+
+        @media screen and (max-width: 600px) {
+            margin: 0;
+        }
+
+        &-item {
+            display: flex;
+            align-items: center;
+            width: calc(50% - 254px);
+            margin: 0 127px 67px;
+
+            @media screen and (max-width: 1399px) {
+                width: calc(50% - 140px);
+                margin: 0 70px 40px;
+            }
+
+            @media screen and (max-width: 1199px) {
+                width: calc(50% - 40px);
+                margin: 0 20px 40px;
+            }
+
+            @media screen and (max-width: 600px) {
+                position: relative;
+                width: 100%;
+                align-items: flex-start;
+                padding-left: 20px;
+                margin: 0 auto 20px;
+
+                &:before {
+                    position: absolute;
+                    left: 0;
+                    content: '.';
+                    font-size: 30px;
+                    line-height: 1;
+                    transform: translateY(-15px);
+                    color: $gold;
+                }
+            }
+
+            @media screen and (max-width: 399px) {
+                max-width: 297px;
+            }
+
+            &.element-animation {
+                opacity: 0;
+            }
+    
+            &.element-animation.element-show {
+                opacity: 1;
+                transition: opacity 1s;
+                animation: textUp 1s ease;
+            }
+        }
+
+        &-icon {
+            margin-right: 32px;
+            @media screen and (max-width: 1199px) {
+                margin-right: 20px;
+            }
+
+            @media screen and (max-width: 600px) {
+                display: none;
+            }
+            img {
+                min-width: 100px;
+                @media screen and (max-width: 1199px) {
+                    min-width: 60px;
+                    max-width: 60px;
+                }
+            }
+        }
+
+        &-text {
+            font-size: 26px;
+            line-height: 120%;
+            color: $gold;
+
+            @media screen and (max-width: 1199px) {
+                font-size: 20px;
+            }
+
+            @media screen and (max-width: 767px) {
+                font-size: 18px;
+            }
+        }
+    }
+}

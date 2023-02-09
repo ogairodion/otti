@@ -1,0 +1,34 @@
+-
+    const qualities = [
+        {
+            text: "Не содержат испорченных ядер",
+            id : "1", 
+        },
+        {
+            text: "Не содержат сорной примеси",
+            id: "2",
+        },
+        {
+            text: "Не заражены вредителями",
+            id: "3",
+        },
+        {
+            text: "Соответствует нормам влажности и кислотности",
+            id: "4",
+        },
+        {
+            text: "Соответствует органолептическим показателям",
+            id: "5",
+        }
+    ];
+
+section.qualities#qualities
+    .l-default
+        .qualities__info
+            h2.qualities__title.title--h2.element-animation ОВСЯНЫЕ ХЛОПЬЯ: ПРОДУКТ ПРОСТОЙ, НО СЛОЖНЫЙ?
+            .qualities__list 
+                .qualities__list-title Идеальные овсяные хлопья:
+                .qualities__list-items 
+                    each qualities_item in qualities
+                        .qualities__list-item.element-animation(data-id=qualities_item.id)= qualities_item.text
+        

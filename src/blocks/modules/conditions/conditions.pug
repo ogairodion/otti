@@ -1,0 +1,37 @@
+-
+    const conditions = [
+        {
+            icon: "1",
+            text: "Налаженная логистика повсей Украине"
+        },
+        {
+            icon: "2",
+            text: "Гарантия поставки в течении 3 дней"
+        },
+        {
+            icon: "3",
+            text: "Конкурентные цены и отсрочка платежа"
+        },
+        {
+            icon: "4",
+            text: "Любые объемы поставок, возможность возвратов и обменов"
+        },
+        {
+            icon: "5",
+            text: "Маркетинговая поддержка"
+        },
+        {
+            icon: "6",
+            text: "Мерчендайзинговая поддержка"
+        }
+    ]
+
+section.conditions#conditions(style="background: url('.././img/conditions/bg.jpg'); background-size: cover;")
+    .l-default 
+        h2.conditions__title.title.title--h2.element-animation Условия сотрудничества:
+        .conditions__list
+            each conditions_item in conditions
+                .conditions__list-item.element-animation
+                    .conditions__list-icon
+                        img.lazy(data-src="img/svg/conditions/" + conditions_item.icon + ".svg", alt="") 
+                    .conditions__list-text= conditions_item.text
